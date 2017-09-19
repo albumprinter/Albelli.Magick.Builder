@@ -3,8 +3,7 @@ FROM amazonlinux
 RUN yum update -y
 
 RUN yum groupinstall "Development Tools" -y
-RUN yum install -y openssh-server yum-utils git make autoconf git openssh-server libjpeg-devel cmake
-RUN yum-builddep ImageMagick -y
+RUN yum install -y openssh-server yum-utils git make autoconf libjpeg-devel libpng-devel libwebp-devel cmake
 
 # dotnet core
 RUN yum install -y libunwind libicu wget

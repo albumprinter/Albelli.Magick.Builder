@@ -19,7 +19,16 @@ cd ImageMagick/ImageMagick/
 
 # build the native part
 magick_prefix="$artifactsDir"imagemagick_built
-./configure --with-magick-plus-plus=no --with-quantum-depth="$magick_quantum" --enable-hdri="$magick_hdri" --prefix="$magick_prefix"
+./configure --with-magick-plus-plus=no \
+            --with-quantum-depth="$magick_quantum" \
+            --with-jpeg \
+            --with-png \
+            --with-webp \
+            --without-pango \
+            --without-x \
+            --without-fontconfig \
+            --enable-hdri="$magick_hdri" \
+            --prefix="$magick_prefix"
 
 make
 make install
