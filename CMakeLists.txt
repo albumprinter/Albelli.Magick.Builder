@@ -2,13 +2,13 @@ cmake_minimum_required(VERSION 2.8)
 
 set(QUANTUM_DEPTH 8)
 set(HDRI NO)
-set(TARGET_NAME Magick.NET-Q${QUANTUM_DEPTH}-x64.Native)
+set(TARGET_NAME Magick.NET-Q${QUANTUM_DEPTH}-x64.Native.dll)
 
 include_directories(.
 	../../ImageMagick/include
 	../../ImageMagick/Q${QUANTUM_DEPTH}/include)
 
-link_directories(${PROJECT_SOURCE_DIR}/../../ImageMagick/Source/build)
+link_directories(${IMAGEMAGICK_LIB_DIR})
 
 add_definitions(-DMAGICK_NET_LINUX -DMAGICKCORE_QUANTUM_DEPTH=${QUANTUM_DEPTH} -DMAGICKCORE_HDRI_ENABLE=0)
 
