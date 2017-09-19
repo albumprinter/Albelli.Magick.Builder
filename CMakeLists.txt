@@ -4,7 +4,7 @@ set(QUANTUM_DEPTH 8)
 set(HDRI NO)
 set(TARGET_NAME Magick.NET-Q${QUANTUM_DEPTH}-x64.Native.dll)
 
-include_directories(. ${IMAGEMAGICK_PREFIX}/include)
+include_directories(. ${IMAGEMAGICK_PREFIX}/include/ImageMagick-7)
 
 link_directories(${IMAGEMAGICK_PREFIX}/lib)
 
