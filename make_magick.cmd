@@ -27,4 +27,4 @@ docker build -t magick_builder_amzn .
 
 mkdir artifacts
 
-docker run -i --rm -v %cd%:/mnt/repo magick_builder_amzn /bin/sh -c "mkdir /tmp/build; cp /mnt/repo/build_internal.sh /tmp/build; cd /tmp/build; chmod +x build_internal.sh; ./build_internal.sh %magick_tag% %magick_quantum% %magick_hdri%"
+docker run -i --rm -v %cd%:/mnt/repo magick_builder_amzn /bin/sh -c "mkdir /tmp/build; cp /mnt/repo/build_internal.sh /tmp/build; cd /tmp/build; chmod +x build_internal.sh; dos2unix build_internal.sh;./build_internal.sh %magick_tag% %magick_quantum% %magick_hdri%"
