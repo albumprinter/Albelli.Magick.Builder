@@ -1,9 +1,9 @@
 # checkout the magick.net source based on tag
 artifactsDir="/mnt/repo/artifacts/"
 
-magick_tag="7.0.7.0"
-magick_quantum="8"
-magick_hdri="no"
+magick_tag=$1
+magick_quantum=$2
+magick_hdri=$3
 
 git clone https://github.com/dlemstra/Magick.NET.git
 cd Magick.NET
