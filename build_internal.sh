@@ -5,6 +5,8 @@ magick_tag=$1
 magick_quantum=$2
 magick_hdri=$3
 
+echo "Going to build Magick of tag $magick_tag, quantum $magick_quantum and HDRI $magick_hdri"
+
 git clone https://github.com/dlemstra/Magick.NET.git
 cd Magick.NET
 git checkout tags/"$magick_tag"
