@@ -31,4 +31,4 @@ cmake . -DIMAGEMAGICK_PREFIX="$magick_prefix" -DQUANTUM_DEPTH="$magick_quantum" 
 make
 mkdir -p /mnt/repo/artifacts/libMagick.NET-x64.Native
 
-cp ./libMagick.NET-Q"$magick_quantum"-x64.Native.so.dll /mnt/repo/artifacts/libMagick.NET-x64.Native/
+cp ./libMagick.NET-Q"$magick_quantum"-x64.Native.dll.so /mnt/repo/artifacts/libMagick.NET-x64.Native/
