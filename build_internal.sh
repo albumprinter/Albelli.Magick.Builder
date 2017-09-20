@@ -42,3 +42,12 @@ make
 mkdir -p /mnt/repo/artifacts/libMagick.NET-x64.Native
 
 cp ./libMagick.NET-Q"$magick_quantum"-x64.Native.dll.so /mnt/repo/artifacts/libMagick.NET-x64.Native/
+
+# copy all the required binaries
+
+mkdir -p /mnt/repo/artifacts/3rdparty
+
+cp /usr/lib64/liblcms2.so.2 /mnt/repo/artifacts/3rdparty/
+cp /usr/lib64/libjpeg.so.62 /mnt/repo/artifacts/3rdparty/
+cp /usr/lib64/libpng12.so.0 /mnt/repo/artifacts/3rdparty/
+cp /usr/lib64/libwebp.so.4 /mnt/repo/artifacts/3rdparty/
