@@ -24,7 +24,7 @@ magick_prefix="$artifactsDir"imagemagick_built
             --with-jpeg \
             --with-png \
             --with-webp \
-            --with-little-cms \
+            --with-lcms \
             --without-pango \
             --without-x \
             --without-fontconfig \

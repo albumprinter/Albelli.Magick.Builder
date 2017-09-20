@@ -4,7 +4,7 @@ RUN yum update -y
 
 RUN yum groupinstall "Development Tools" -y
 RUN yum install -y cmake git make autoconf yum-utils
-RUN yum install -y libjpeg-devel libpng-devel libwebp-devel lcms-devel
+RUN yum install -y libjpeg-devel libpng-devel libwebp-devel lcms2-devel
 
 # dotnet core
 RUN yum install -y libunwind libicu wget
