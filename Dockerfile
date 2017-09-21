@@ -14,7 +14,6 @@ RUN tar zxf dotnet-dev-centos-x64.1.0.4.tar.gz -C /opt/dotnet
 RUN ln -s /opt/dotnet/dotnet /usr/local/bin
 # end dotnet core
 
-RUN yum install -y vim fontconfig mc dos2unix
 
-EXPOSE 22
-CMD ["/usr/sbin/sshd", "-D"]
+# this thing is needed for the windows build script
+RUN yum install -y dos2unix
