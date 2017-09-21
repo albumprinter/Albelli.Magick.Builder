@@ -15,6 +15,5 @@ Linux
 
 The scripts can also assept optional parameters for Quantum and HDRI. The default values for these parameters are `8` and `no`
 
-After the script is finished (it will take quite some time, that is expected), an `artifacts` folder will appear.
-`artifacts/imagemagick_built/lib/` will contain the native magick binaries.
-and `artifacts/libMagick.NET-x64.Native` will contain the native wrapper binary.
+After the script is finished (it will take quite some time, that is expected), an `artifacts\resultingOutPut\` folder will appear.
+This is where all the artifacts are.

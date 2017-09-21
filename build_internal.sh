@@ -34,7 +34,7 @@ magick_prefix="$artifactsDir"imagemagick_built
 make
 make install
 
-libMagickNetNativeOutDir="$artifactsDir"libMagick.NET-x64.Native/
+libMagickNetNativeOutDir="$artifactsDir"libMagick.NET-x64.Native
 
 # build the wrapper
 cd ../../../../Source/Magick.NET.Native/
@@ -54,7 +54,7 @@ OUT_FILES="/usr/lib64/liblcms2.so.2 \
 /usr/lib64/libwebp.so.4 \
 $magick_prefix/lib/libMagickCore-7.Q8.so.4 \
 $magick_prefix/lib/libMagickWand-7.Q8.so.4 \
-$libMagickNetNativeOutDirlibMagick.NET-Q$magick_quantum-x64.Native.dll.so"
+$libMagickNetNativeOutDir/libMagick.NET-Q$magick_quantum-x64.Native.dll.so"
 
 mkdir -p $OUT_DIR
 
