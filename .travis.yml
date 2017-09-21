@@ -1,0 +1,12 @@
+sudo: required
+
+language: csharp
+
+services:
+  - docker
+
+before_install:
+  - docker build -t magick_builder_amzn .
+
+script:
+  - docker run -i --rm -v ${PWD}:/mnt/repo magick_builder_amzn /bin/sh -c "mkdir /tmp/build; cp /mnt/repo/build_internal.sh /tmp/build; cd /tmp/build; chmod +x build_internal.sh; ./build_internal.sh $magick_tag $magick_quantum $magick_hdri"
