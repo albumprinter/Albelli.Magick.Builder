@@ -1,0 +1,9 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <ItemGroup>
+        <NativeDLL Include="$(MSBuildThisFileDirectory)\..\..\runtimes\**\*.*" />
+        <Content Include="@(NativeDLL)">
+            <Copy>%(FileName)%(Extension)</Copy>
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+</Project>

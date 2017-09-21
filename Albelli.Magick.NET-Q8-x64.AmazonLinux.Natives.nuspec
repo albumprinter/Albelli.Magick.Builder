@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Albelli.Magick.NET-Q8-x64.AmazonLinux.Natives</id>
+    <title>Albelli.Magick.NET-Q8-x64.AmazonLinux.Natives</title>
+    <version>7.0.7.300</version>
+    <authors>Albelli</authors>
+    <owners>Albelli</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Albelli.Magick.NET-Q8-x64.AmazonLinux.Natives is a bunch of binaries needed to run Magick.NET on Amazon Linux</description>
+    <projectUrl>https://github.com/dlemstra/Magick.NET</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/dlemstra/Magick.NET/master/Tests/Magick.NET.Tests/Images/Magick.NET.icon.png</iconUrl>
+    <tags>magick .net</tags>
+    <dependencies>
+        <group targetFramework=".NETStandard1.0">
+        	<dependency id="Microsoft.NETCore.Platforms" version="1.0.1" />
+            <dependency id="Magick.NET-Q8-x64" version="[7.0.7.300]" />
+        </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="artifacts\resultingOutPut\*.*" target="runtime/linux-x64/native" />
+    <file src="*.targets" target="build" />
+  </files>
+</package>
