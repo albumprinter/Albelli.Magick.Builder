@@ -34,20 +34,28 @@ magick_prefix="$artifactsDir"imagemagick_built
 make
 make install
 
+libMagickNetNativeOutDir="$artifactsDir"libMagick.NET-x64.Native/
+
 # build the wrapper
 cd ../../../../Source/Magick.NET.Native/
 cp /mnt/repo/CMakeLists.txt $PWD
 cmake . -DIMAGEMAGICK_PREFIX="$magick_prefix" -DQUANTUM_DEPTH="$magick_quantum" -DHDRI="$magick_hdri"
 make
-mkdir -p /mnt/repo/artifacts/libMagick.NET-x64.Native
+mkdir -p "$libMagickNetNativeOutDir"
 
-cp ./libMagick.NET-Q"$magick_quantum"-x64.Native.dll.so /mnt/repo/artifacts/libMagick.NET-x64.Native/
+cp ./libMagick.NET-Q"$magick_quantum"-x64.Native.dll.so "$libMagickNetNativeOutDir"
 
-# copy all the required binaries
+# copy all the required binaries to the output directory
+OUT_DIR="$artifactsDir"resultingOutPut/
 
-mkdir -p /mnt/repo/artifacts/3rdparty
+OUT_FILES="/usr/lib64/liblcms2.so.2 \
+/usr/lib64/libjpeg.so.62 \
+/usr/lib64/libpng12.so.0 \
+/usr/lib64/libwebp.so.4 \
+$magick_prefix/lib/libMagickCore-7.Q8.so.4 \
+$magick_prefix/lib/libMagickWand-7.Q8.so.4 \
+$libMagickNetNativeOutDirlibMagick.NET-Q$magick_quantum-x64.Native.dll.so"
 
-cp /usr/lib64/liblcms2.so.2 /mnt/repo/artifacts/3rdparty/
-cp /usr/lib64/libjpeg.so.62 /mnt/repo/artifacts/3rdparty/
-cp /usr/lib64/libpng12.so.0 /mnt/repo/artifacts/3rdparty/
-cp /usr/lib64/libwebp.so.4 /mnt/repo/artifacts/3rdparty/
+mkdir -p $OUT_DIR
+
+cp $OUT_FILES $OUT_DIR
