@@ -1,4 +1,6 @@
-# Magick builder
+# Magick builder 
+
+![Build status](https://img.shields.io/travis/albumprinter/Albelli.Magick.Builder.svg "Travis CI build status")
 
 Builds Magick.NET native wrapper in the amazonlinux docker container. This should make it compatible with AWS Lambda. At least that is what I think ;)
 
