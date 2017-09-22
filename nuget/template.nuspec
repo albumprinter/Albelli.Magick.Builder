@@ -19,7 +19,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="artifacts\resultingOutPut\*.*" target="runtime/linux-x64/native" />
+    <file src="artifacts/resultingOutPut/" target="runtime/linux-x64/native" />
     <file src="*.targets" target="build" />
     <file src="empty" target="lib/net40"/>
     <file src="empty" target="lib/netstandard13" />
