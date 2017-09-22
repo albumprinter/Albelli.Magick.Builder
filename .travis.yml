@@ -11,3 +11,4 @@ before_install:
 script:
   - chmod +x make_magick.sh
   - ./make_magick.sh $magick_tag $magick_quantum $magick_hdri
+  - nuget push Albelli.Magick.NET-Q"$magick_quantum"-x64.AmazonLinux.Natives.nupkg $nuget_api_key -Source $nuget_feed
