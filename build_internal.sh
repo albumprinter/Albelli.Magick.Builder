@@ -16,6 +16,10 @@ git clean -fdx
 cd ImageMagick/Source
 ./Checkout.sh
 cd ImageMagick/ImageMagick/
+cp /mnt/repo/stupid_checkout.sh $PWD
+chmod +x stupid_checkout.sh
+dos2unix stupid_checkout.sh
+./stupid_checkout.sh
 
 # build the native part
 magick_prefix="$artifactsDir"imagemagick_built
