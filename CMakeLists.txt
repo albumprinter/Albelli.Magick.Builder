@@ -4,9 +4,15 @@ set(QUANTUM_DEPTH 8)
 set(HDRI NO)
 set(TARGET_NAME Magick.NET-Q${QUANTUM_DEPTH}-x64.Native.dll)
 
-include_directories(. ${IMAGEMAGICK_PREFIX}/include/ImageMagick-7)
+if (${HDRI})
+	set(HDRI_SUFFIX HDRI)
+endif()
 
-link_directories(${IMAGEMAGICK_PREFIX}/lib)
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(IM MagickWand-7.Q${QUANTUM_DEPTH}${HDRI_SUFFIX} REQUIRED)
+pkg_check_modules(JPEG libjpeg REQUIRED)
+
+include_directories(. ${IM_INCLUDE_DIRS} ${JPEG_INCLUDE_DIRS})
 
 add_definitions(-DMAGICK_NET_LINUX -DMAGICKCORE_QUANTUM_DEPTH=${QUANTUM_DEPTH} -DMAGICKCORE_HDRI_ENABLE=0)
 
@@ -52,11 +58,4 @@ add_library(${TARGET_NAME} SHARED
 
 set_target_properties(${TARGET_NAME} PROPERTIES LINK_FLAGS -Wl,--no-undefined)
 
-if (${HDRI})
-	set(HDRI_SUFFIX HDRI)
-endif()
-
-target_link_libraries(${TARGET_NAME}
-	MagickCore-7.Q${QUANTUM_DEPTH}${HDRI_SUFFIX}
-	MagickWand-7.Q${QUANTUM_DEPTH}${HDRI_SUFFIX}
-	jpeg m)
+target_link_libraries(${TARGET_NAME} ${IM_STATIC_LIBRARIES} pthread)
