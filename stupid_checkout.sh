@@ -9,8 +9,9 @@ cd jpeg
 git checkout tags/1.5.2
 
 autoreconf -fiv
-./configure --disable-shared --with-pic
+./configure --disable-shared --with-pic --prefix="/usr/local/"
 make
+make install
 
 cd ..
 
