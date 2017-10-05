@@ -34,7 +34,7 @@ make
 make install
 cd ..
 
-########
+#########################
 
 # webp 0.5.1
 git clone https://github.com/webmproject/libwebp.git webp
@@ -45,3 +45,13 @@ git checkout tags/v0.5.1
 make
 make install
 cd ..
+
+#########################
+
+git clone https://git.code.sf.net/p/libpng/code png
+cd png
+git checkout tags/v1.6.13beta03
+./autogen.sh
+./configure --disable-shared --with-pic
+make
+make install
