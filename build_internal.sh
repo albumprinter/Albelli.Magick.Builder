@@ -29,6 +29,7 @@ magick_prefix="$artifactsDir"imagemagick_built
             --without-x \
             --without-fontconfig \
             --disable-shared \
+            --with-pic \
             --enable-delegate-build \
             --enable-hdri="$magick_hdri" \
             --prefix="$magick_prefix"
