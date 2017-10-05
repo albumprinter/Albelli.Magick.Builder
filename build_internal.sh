@@ -35,8 +35,7 @@ magick_prefix="$artifactsDir"imagemagick_built
             --disable-shared \
             --with-pic \
             --enable-delegate-build \
-            --enable-hdri="$magick_hdri" \
-            --prefix="$magick_prefix"
+            --enable-hdri="$magick_hdri"
 
 make
 make install
