@@ -21,6 +21,11 @@ chmod +x stupid_checkout.sh
 dos2unix stupid_checkout.sh
 ./stupid_checkout.sh
 
+
+# fix libs resolution
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
+
+
 # build the native part
 magick_prefix="$artifactsDir"imagemagick_built
 ./configure --with-magick-plus-plus=no \
@@ -29,6 +34,7 @@ magick_prefix="$artifactsDir"imagemagick_built
             --with-png \
             --with-webp \
             --with-lcms \
+            --with-zlib \
             --without-pango \
             --without-x \
             --without-fontconfig \

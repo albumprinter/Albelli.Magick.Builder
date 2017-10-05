@@ -1,6 +1,4 @@
 # fix the pkg config variable, so lcms and webp libs are recognized by the builder
-export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig/
-
 
 # clone & build jpeg
 
@@ -16,7 +14,6 @@ make install
 cd ..
 
 ##########################
-
 # clone & build zlib, 1.2.9
 git clone https://github.com/madler/zlib.git zlib
 cd zlib
