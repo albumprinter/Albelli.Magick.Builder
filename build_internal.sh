@@ -54,13 +54,7 @@ cp ./libMagick.NET-Q"$magick_quantum"-x64.Native.dll.so "$libMagickNetNativeOutD
 # copy all the required binaries to the output directory
 OUT_DIR="$artifactsDir"resultingOutPut/
 
-OUT_FILES="/usr/lib64/liblcms2.so.2 \
-/usr/lib64/libjpeg.so.62 \
-/usr/lib64/libpng12.so.0 \
-/usr/lib64/libwebp.so.4 \
-$magick_prefix/lib/libMagickCore-7.Q8.so.4 \
-$magick_prefix/lib/libMagickWand-7.Q8.so.4 \
-$libMagickNetNativeOutDir/libMagick.NET-Q$magick_quantum-x64.Native.dll.so"
+OUT_FILES="$libMagickNetNativeOutDir/libMagick.NET-Q$magick_quantum-x64.Native.dll.so"
 
 mkdir -p $OUT_DIR
 
