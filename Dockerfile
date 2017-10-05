@@ -20,3 +20,5 @@ RUN yum install -y dos2unix
 
 # comfy terminal for development
 RUN yum install -y tmux
+
+RUN yum install -y nasm
