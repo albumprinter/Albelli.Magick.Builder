@@ -17,3 +17,6 @@ RUN ln -s /opt/dotnet/dotnet /usr/local/bin
 
 # this thing is needed for the windows build script
 RUN yum install -y dos2unix
+
+# comfy terminal for development
+RUN yum install -y tmux
