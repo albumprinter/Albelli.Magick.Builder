@@ -20,7 +20,7 @@ cd ..
 # clone & build zlib, 1.2.9
 git clone https://github.com/madler/zlib.git zlib
 cd zlib
-git checkout tags/1.2.9
+git checkout tags/v1.2.9
 ./configure --static
 make CFLAGS='-fPIC'
 make install
